@@ -1,0 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EcommHRV.Models
+{
+    public class Producer
+    {
+        [Key]
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string? ProfilePicture { get; set; }
+        public ICollection<Movie> Movies { get; set; }
+
+    }
+}
