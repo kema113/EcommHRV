@@ -1,5 +1,7 @@
+using Ecom.Data;
 using EcommHRV.Data;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace EcommHRV
 {
@@ -35,6 +37,8 @@ op.UseSqlServer(builder.Configuration.GetConnectionString("conString")));
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            AppDbInitializer.Seed(app);
 
             app.Run();
         }

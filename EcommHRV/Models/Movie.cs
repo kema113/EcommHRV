@@ -16,6 +16,7 @@ namespace EcommHRV.Models
         public DateTime EndDate { get; set; }
         public MovieCategory MovieCategory { get; set; }
         public ICollection<Actor_Movie> Actors_Movie { get; set; }
+
         [ForeignKey("Cinema")]
         public int CinemaId { get; set; }
         public Cinema Cinema { get; set; }
